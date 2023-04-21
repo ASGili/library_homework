@@ -10,3 +10,8 @@ def index():
 @app.route('/catalogue/')
 def catalogue():
     return render_template('catalogue.html',title="Catalogue",books=books) 
+
+@app.route('/catalogue/<index>')
+def book_page(index):
+    book = books[int(index)]
+    return render_template('book.html',title=index,book=book)
