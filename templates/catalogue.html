@@ -4,7 +4,7 @@
 <p>Title; Author; Genre</p>
 {% for book in books %}
 <div>
-<p>{{book.title}}; {{book.author}}; {{book.genre}}</p>
+<p><a href="/catalogue/{{(loop.index0)}}">{{book.title}}|{{book.author}}|{{book.genre}}</a></p>
 </div>
 
 {% endfor %}
