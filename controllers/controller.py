@@ -17,9 +17,8 @@ def adddel_book():
         add_book(new_book)
         return index()
     elif request.form['submit'] == "Delete Book":
-        # del_book(new_book)
-        return index()
-    else:
+        books_index = int(request.form['choose_book'])
+        del_book(books_index)
         return index()
 
 @app.route('/catalogue/')

@@ -9,5 +9,5 @@ books = [book1,book2,book3]
 def add_book(book):
     books.append(book)
 
-def del_book(book):
-    books.remove(book)
+def del_book(books_index):
+   books.remove(books[books_index])
