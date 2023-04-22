@@ -5,7 +5,7 @@ from models.book import Book
 
 @app.route('/')
 def index():
-    return render_template('index.html',title="Home Page")
+    return render_template('index.html',title="Home Page", books=books)
 
 @app.route('/', methods=['POST'])
 def adddel_book():
@@ -17,10 +17,6 @@ def adddel_book():
         add_book(new_book)
         return index()
     elif request.form['submit'] == "Delete Book":
-        # book_title = str(request.form['title'])
-        # book_author = str(request.form['author'])
-        # book_genre = str(request.form['genre'])
-        # new_book = Book(book_title,book_author,book_genre)
         # del_book(new_book)
         return index()
     else:
