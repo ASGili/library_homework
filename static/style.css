@@ -1,0 +1,14 @@
+html {
+    background-color: aqua;
+    font-size: 36px;
+}
+
+.input {
+    height: 36px;
+    font-size: 28px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+}

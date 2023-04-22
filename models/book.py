@@ -4,4 +4,3 @@ class Book:
         self.author = author
         self.genre = genre
         self.checked = False
-    
