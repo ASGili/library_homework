@@ -22,7 +22,7 @@ def adddel_book():
     elif request.form['submit'] == "Check Out":
         books_index = int(request.form['choose_book'])
         check_out_book(books_index)
-        return index()
+    return index()
 
 @app.route('/catalogue/')
 def catalogue():
@@ -32,4 +32,3 @@ def catalogue():
 def book_page(index):
     book = books[int(index)]
     return render_template('book.html',title=index,book=book)
-
