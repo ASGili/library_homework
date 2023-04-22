@@ -22,6 +22,15 @@
         <option value="{{loop.index0}}">{{book.title}} by {{book.author}}</option>
         {% endfor %}
     <input type="submit" name="submit" value="Delete Book"></select>
+</form>
+
+<form name="check_out" method="POST">
+    <label for="check_out">Check out or return a book: </label>
+    <select name="choose_book">
+        {% for book in books %}
+        <option value="{{loop.index0}}">{{book.title}} by {{book.author}}</option>
+        {% endfor %}
+<input type="submit" name="submit" value="Check Out"></select>    
 
 </form>
 

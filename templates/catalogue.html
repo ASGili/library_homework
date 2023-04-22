@@ -1,10 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
-<p>Title; Author; Genre</p>
+<p>Title; Author; Genre; Available for Loan?</p>
 {% for book in books %}
 <div>
-<p><a href="/catalogue/{{(loop.index0)}}">{{book.title}}|{{book.author}}|{{book.genre}}</a></p>
+<p><a href="/catalogue/{{(loop.index0)}}">{{book.title}}|{{book.author}}|{{book.genre}}</a>
+{% if book.checked == True %}  
+{{"\u274c"}}
+{% else %}
+{{"\u2714"}}
+{% endif %}
+</p>
 </div>
 
 {% endfor %}

@@ -11,3 +11,9 @@ def add_book(book):
 
 def del_book(books_index):
    books.remove(books[books_index])
+
+def check_out_book(books_index):
+    if books[books_index].checked == False:
+        books[books_index].checked = True
+    else:
+        books[books_index].checked = False

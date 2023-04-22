@@ -1,6 +1,6 @@
 from flask import render_template, request
 from app import app
-from models.catalogue import books, add_book, del_book
+from models.catalogue import books, add_book, del_book, check_out_book
 from models.book import Book
 
 @app.route('/')
@@ -19,6 +19,9 @@ def adddel_book():
     elif request.form['submit'] == "Delete Book":
         books_index = int(request.form['choose_book'])
         del_book(books_index)
+    elif request.form['submit'] == "Check Out":
+        books_index = int(request.form['choose_book'])
+        check_out_book(books_index)
         return index()
 
 @app.route('/catalogue/')
