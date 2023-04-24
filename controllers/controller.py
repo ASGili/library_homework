@@ -15,7 +15,6 @@ def adddel_book():
         book_genre = request.form['genre']
         new_book = Book(book_title,book_author,book_genre)
         add_book(new_book)
-        return index()
     elif request.form['submit'] == "Delete Book":
         books_index = int(request.form['choose_book'])
         del_book(books_index)
